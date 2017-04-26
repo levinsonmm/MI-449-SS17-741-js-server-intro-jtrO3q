@@ -11,7 +11,7 @@ var server = http.createServer(function (request, response) {
     )
   } else if (request.url === '/random-joke') {
     // 1 of 3 random knock knock jokes
-    if (Math.random() % 3 === 0) {
+    if (Math.ceil(Math.random() * 100) % 3 === 0) {
       response.end(
         // greeting
         '<h1>Joke</h1>' +
@@ -21,7 +21,7 @@ var server = http.createServer(function (request, response) {
         '<p>Major who?</p>' +
         '<p>Major day with this joke, haven’t I?</p>'
       )
-    } else if (Math.random() % 3 === 1) {
+    } else if (Math.ceil(Math.random() * 100) % 3 === 1) {
       response.end(
         // greeting
         '<h1>Joke</h1>' +
@@ -31,7 +31,7 @@ var server = http.createServer(function (request, response) {
         '<p>Armageddon who?</p>' +
         '<p>Armageddon a little bored. Let’s go out.</p>'
       )
-    } else if (Math.random() % 3 === 2) {
+    } else if (Math.ceil(Math.random() * 100) % 3 === 2) {
       response.end(
         // greeting
         '<h1>Joke</h1>' +
