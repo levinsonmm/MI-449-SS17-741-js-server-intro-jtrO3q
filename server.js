@@ -42,7 +42,6 @@ var server = http.createServer(function (request, response) {
         '<p>Let’s Barbie Q!</p>'
       )
     }
-    response.end('<h1>About</h1>')
   } else if (request.url === '/cuteness') {
     // cute animal
     response.end(
