@@ -16,30 +16,30 @@ var server = http.createServer(function (request, response) {
         // greeting
         '<h1>Joke</h1>' +
         '<p>Knock knock.</p>' +
-        '<p>Who’s there?</p>' +
+        '<p>Who\'s there?</p>' +
         '<p>Major.</p>' +
         '<p>Major who?</p>' +
-        '<p>Major day with this joke, haven’t I?</p>'
+        '<p>Major day with this joke, haven\'t I?</p>'
       )
     } else if (Math.ceil(Math.random() * 100) % 3 === 1) {
       response.end(
         // greeting
         '<h1>Joke</h1>' +
         '<p>Knock knock.</p>' +
-        '<p>Who’s there?</p>' +
+        '<p>Who\'s there?</p>' +
         '<p>Armageddon.</p>' +
         '<p>Armageddon who?</p>' +
-        '<p>Armageddon a little bored. Let’s go out.</p>'
+        '<p>Armageddon a little bored. Let\'s go out.</p>'
       )
     } else if (Math.ceil(Math.random() * 100) % 3 === 2) {
       response.end(
         // greeting
         '<h1>Joke</h1>' +
         '<p>Knock knock.</p>' +
-        '<p>Who’s there?</p>' +
+        '<p>Who\'s there?</p>' +
         '<p>Barbie.</p>' +
         '<p>Barbie who?</p>' +
-        '<p>Let’s Barbie Q!</p>'
+        '<p>Let\'s Barbie Q!</p>'
       )
     }
   } else if (request.url === '/cuteness') {
