@@ -7,16 +7,16 @@ var server = http.createServer(function (request, response) {
     response.end(
       // greeting
       '<h1>Home</h1>' +
-      '<img src="https://i.imgur.com/jKhQJVH.jpg" alt="Waving hi">'
+      '<p>Hiiiiiiiii</p>'
     )
   } else if (request.url === '/random-joke') {
     // 1 of 3 random knock knock jokes
     var num = Math.ceil(Math.random() * 100) % 3
     if (num === 0) {
       response.end(
-        // greeting
+        // joke 1
         '<h1>Joke</h1>' +
-        '<a href="./">Go Home</a>' +
+        '<p><a href="./">Go Home</a></p>' +
         '<p>Knock knock.</p>' +
         '<p>Who\'s there?</p>' +
         '<p>Major.</p>' +
@@ -25,9 +25,9 @@ var server = http.createServer(function (request, response) {
       )
     } else if (num === 1) {
       response.end(
-        // greeting
+        // joke 2
         '<h1>Joke</h1>' +
-        '<a href="./">Go Home</a>' +
+        '<p><a href="./">Go Home</a></p>' +
         '<p>Knock knock.</p>' +
         '<p>Who\'s there?</p>' +
         '<p>Armageddon.</p>' +
@@ -36,9 +36,9 @@ var server = http.createServer(function (request, response) {
       )
     } else if (num === 2) {
       response.end(
-        // greeting
+        // joke 3
         '<h1>Joke</h1>' +
-        '<a href="./">Go Home</a>' +
+        '<p><a href="./">Go Home</a></p>' +
         '<p>Knock knock.</p>' +
         '<p>Who\'s there?</p>' +
         '<p>Barbie.</p>' +
@@ -51,14 +51,15 @@ var server = http.createServer(function (request, response) {
     response.end(
       // greeting
       '<h1>Cutie</h1>' +
-      '<a href="./">Go Home</a>' +
-      '<img src="https://scontent.fdet1-1.fna.fbcdn.net/v/t31.0-8/17880341_10210114320909138_3582055037028312316_o.jpg?oh=1390ec351cfbc0a874d444772b2e15ee&oe=59853006" alt="Waving hi">'
+      '<p><a href="./">Go Home</a></p>' +
+      '<img src="https://scontent.fdet1-1.fna.fbcdn.net/v/t31.0-8/17880341_10210114320909138_3582055037028312316_o.jpg?oh=1390ec351cfbc0a874d444772b2e15ee&oe=59853006" alt="frankie the chihuahua">'
     )
   } else {
-    // funny error page
+    // error page
     response.end(
       '<h1>Page Not Found</h1>' +
-      '<a href="./">Go Home</a>'
+      '<p><a href="./">Go Home</a></p>' +
+      '<p>The requested URL ' + request.url + ' was not found on this server. Sorry pal.</p>'
     )
   }
 })
